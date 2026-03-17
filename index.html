@@ -544,32 +544,6 @@ doloremque, facere consequuntur vitae ut?
   </div>
 </section>
 
-<!-- Countdown Timer Script -->
-<script>
-  // Set deadline to 14 days from now
-  const deadline = new Date();
-  deadline.setDate(deadline.getDate() + 14);
-
-  function updateTimer() {
-    const now = new Date();
-    const diff = deadline - now;
-    if (diff <= 0) {
-      document.getElementById('timer-hours').textContent = '00';
-      document.getElementById('timer-mins').textContent = '00';
-      document.getElementById('timer-secs').textContent = '00';
-      return;
-    }
-    const h = Math.floor(diff / 1000 / 60 / 60) % 24;
-    const m = Math.floor(diff / 1000 / 60) % 60;
-    const s = Math.floor(diff / 1000) % 60;
-    document.getElementById('timer-hours').textContent = String(h).padStart(2, '0');
-    document.getElementById('timer-mins').textContent = String(m).padStart(2, '0');
-    document.getElementById('timer-secs').textContent = String(s).padStart(2, '0');
-  }
-  setInterval(updateTimer, 1000);
-  updateTimer();
-</script>
-
 <footer id="footer" class="overflow-hidden my-lg-9">
 <div class="container-lg">
 <div class="row justify-content-center">
@@ -673,6 +647,5 @@ crossorigin="anonymous"></script>
   setInterval(updateTimer, 1000);
   updateTimer();
 </script>
-</body>
-
+ </body>
 </html>
