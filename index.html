@@ -333,23 +333,32 @@ doloremque, facere consequuntur vitae ut?
       </div>
       <div class="col-lg-6">
 
-        <div class="border-start border-2 border-dark ps-4 mb-4">
-          <h5 class="fw-semibold mb-2">Lumisera</h5>
-          <p class="fs-3 mb-0">A radiance-boosting serum that brings light back to dull, tired skin. Crafted with brightening naturals for a lit-from-within glow.</p>
-        </div>
+  <div class="border-start border-2 border-dark ps-4 mb-4 d-flex gap-3 align-items-start">
+    <img src="images/item-1.jpg" alt="Lumisera" style="width:80px; height:80px; object-fit:cover;">
+    <div>
+      <h5 class="fw-semibold mb-2">Lumisera</h5>
+      <p class="fs-3 mb-0">A radiance-boosting serum that brings light back to dull, tired skin. Crafted with brightening naturals for a lit-from-within glow.</p>
+    </div>
+  </div>
 
-        <div class="border-start border-2 border-dark ps-4 mb-4">
-          <h5 class="fw-semibold mb-2">Dewsera</h5>
-          <p class="fs-3 mb-0">Fresh, lightweight, and deeply hydrating. Dewsera quenches your skin with nature's purest ingredients — leaving it soft, plump, and dewy all day.</p>
-        </div>
+  <div class="border-start border-2 border-dark ps-4 mb-4 d-flex gap-3 align-items-start">
+    <img src="images/item-2.jpg" alt="Dewsera" style="width:80px; height:80px; object-fit:cover;">
+    <div>
+      <h5 class="fw-semibold mb-2">Dewsera</h5>
+      <p class="fs-3 mb-0">Fresh, lightweight, and deeply hydrating. Dewsera quenches your skin with nature's purest ingredients — leaving it soft, plump, and dewy all day.</p>
+    </div>
+  </div>
 
-        <div class="border-start border-2 border-dark ps-4 mb-4">
-          <h5 class="fw-semibold mb-2">Velasera</h5>
-          <p class="fs-3 mb-0">Warm, nourishing, and gentle. Velasera wraps your skin in a blanket of organic botanicals — fading dark spots and restoring your natural radiance.</p>
-        </div>
+  <div class="border-start border-2 border-dark ps-4 mb-4 d-flex gap-3 align-items-start">
+    <img src="images/item-3.jpg" alt="Velasera" style="width:80px; height:80px; object-fit:cover;">
+    <div>
+      <h5 class="fw-semibold mb-2">Velasera</h5>
+      <p class="fs-3 mb-0">Warm, nourishing, and gentle. Velasera wraps your skin in a blanket of organic botanicals — fading dark spots and restoring your natural radiance.</p>
+    </div>
+  </div>
 
-        <a href="https://wa.me/923127655369?text=Hi!%20I%20want%20to%20order%20a%20Serene%20Serum" target="_blank" class="btn btn-outline-dark text-uppercase mt-3">Order on WhatsApp</a>
-      </div>
+  <a href="https://wa.me/923127655369?text=Hi!%20I%20want%20to%20order%20a%20Serene%20Serum" target="_blank" class="btn btn-outline-dark text-uppercase mt-3">Order on WhatsApp</a>
+</div>
     </div>
 
     <div class="swiper swiper-carousel mb-5">
@@ -632,8 +641,8 @@ crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 <script>
   // Set deadline to 14 days from now
-  const deadline = new Date(new Date().getTime() + 168 * 60 * 60 * 1000);
-
+  const deadline = new Date();
+  deadline.setDate(deadline.getDate() + 14);
 
   function updateTimer() {
     const now = new Date();
@@ -644,7 +653,7 @@ crossorigin="anonymous"></script>
       document.getElementById('timer-secs').textContent = '00';
       return;
     }
-    const h = Math.floor(diff / 1000 / 60 / 60);
+    const h = Math.floor(diff / 1000 / 60 / 60) % 24;
     const m = Math.floor(diff / 1000 / 60) % 60;
     const s = Math.floor(diff / 1000) % 60;
     document.getElementById('timer-hours').textContent = String(h).padStart(2, '0');
